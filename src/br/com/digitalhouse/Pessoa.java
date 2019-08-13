@@ -7,33 +7,41 @@ public abstract class Pessoa {
     private Data birth;
 
     //constructor erase
-    public Pessoa(){
+    public Pessoa() {
 
     }
 
     //constructor full
-    public Pessoa(String newName, Data newBirth){
+    public Pessoa(String newName, Data newBirth) {
         setName(newName);
         setBirth(newBirth);
     }
 
+    //Abstract method
+    public abstract void imprimedados();
+
     //Getter and Setters
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public Data getBirth(){
+    public Data getBirth() {
         return birth;
     }
 
-    public void setName(String newName){
-        name=newName;
+    public void setName(String newName) {
+        name = newName;
     }
 
-    public void setBirth(Data newBirth){
-        birth=newBirth;
+    public void setBirth(Data newBirth) {
+        birth = newBirth;
     }
 
-    //Abstract method
-    public abstract void imprimedados();
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "name='" + name + '\'' +
+                ", birth=" + birth +
+                '}';
+    }
 }

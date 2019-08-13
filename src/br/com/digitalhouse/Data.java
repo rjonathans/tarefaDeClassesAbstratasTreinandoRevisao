@@ -37,4 +37,13 @@ public class Data {
     public void setYear(int newYear){
         year=newYear;
     }
+
+    @Override
+    public String toString() {
+        return "Data{" +
+                "day=" + day +
+                ", month=" + month +
+                ", year=" + year +
+                '}';
+    }
 }
